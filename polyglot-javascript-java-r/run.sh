@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 
-set -ex
-
-$GRAALVM_HOME/bin/node --jvm --polyglot server.js
+docker build . -t graalvm-js-r-demo
+docker run -p 3000:3000 graalvm-js-r-demo
